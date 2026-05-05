@@ -10,14 +10,14 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --sand:   #F5F0E8;
-      --cream:  #FDFAF4;
-      --brown:  #7C6650;
-      --brown2: #A08060;
-      --dark:   #2C2218;
-      --gray:   #6B6058;
-      --green:  #5C7A5C;
-      --gold:   #C9A84C;
+      --sand:   #FDE8F0;
+      --cream:  #FFF5F9;
+      --brown:  #C4728E;
+      --brown2: #E096B0;
+      --dark:   #5C2D3E;
+      --gray:   #8A5C6E;
+      --green:  #F0B8CE;
+      --gold:   #F4C6D8;
     }
 
     html { scroll-behavior: smooth; }
@@ -32,7 +32,7 @@
     /* ===== HERO ===== */
     .hero {
       min-height: 100vh;
-      background: linear-gradient(160deg, #2C2218 0%, #4A3828 50%, #6B5040 100%);
+      background: linear-gradient(160deg, #E8A0BA 0%, #F2BDD0 50%, #FAD9E8 100%);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -48,8 +48,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse at 20% 50%, rgba(201,168,76,.12) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 20%, rgba(92,122,92,.10) 0%, transparent 50%);
+        radial-gradient(ellipse at 20% 50%, rgba(255,255,255,.2) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(255,220,235,.2) 0%, transparent 50%);
     }
 
     .hero-inner { position: relative; z-index: 1; }
@@ -57,25 +57,25 @@
     .avatar {
       width: 120px; height: 120px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold), var(--brown2));
+      background: linear-gradient(135deg, #FBDCE9, #F0B8CE);
       display: flex; align-items: center; justify-content: center;
       font-size: 52px;
       margin: 0 auto 32px;
-      box-shadow: 0 0 0 4px rgba(201,168,76,.3), 0 20px 60px rgba(0,0,0,.4);
+      box-shadow: 0 0 0 4px rgba(255,255,255,.5), 0 20px 60px rgba(200,100,140,.2);
     }
 
     .hero h1 {
       font-family: 'Noto Serif JP', serif;
       font-size: clamp(32px, 6vw, 56px);
       font-weight: 700;
-      color: #fff;
+      color: #5C2D3E;
       letter-spacing: .12em;
       margin-bottom: 12px;
     }
 
     .hero-en {
       font-size: 14px;
-      color: rgba(255,255,255,.5);
+      color: rgba(92,45,62,.55);
       letter-spacing: .25em;
       text-transform: uppercase;
       margin-bottom: 28px;
@@ -83,8 +83,8 @@
 
     .hero-tag {
       display: inline-block;
-      border: 1px solid rgba(201,168,76,.6);
-      color: var(--gold);
+      border: 1px solid rgba(184,59,114,.35);
+      color: #B83B72;
       font-size: 13px;
       padding: 6px 20px;
       border-radius: 20px;
@@ -94,7 +94,7 @@
 
     .hero-desc {
       font-size: clamp(15px, 2vw, 18px);
-      color: rgba(255,255,255,.75);
+      color: rgba(92,45,62,.75);
       max-width: 520px;
       margin: 0 auto 48px;
       font-weight: 300;
@@ -102,14 +102,14 @@
 
     .scroll-hint {
       font-size: 12px;
-      color: rgba(255,255,255,.35);
+      color: rgba(92,45,62,.4);
       letter-spacing: .15em;
     }
     .scroll-hint::after {
       content: '';
       display: block;
       width: 1px; height: 48px;
-      background: rgba(255,255,255,.2);
+      background: rgba(92,45,62,.15);
       margin: 10px auto 0;
     }
 
@@ -124,7 +124,7 @@
       font-size: 11px;
       letter-spacing: .3em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--brown);
       margin-bottom: 12px;
     }
 
@@ -139,7 +139,7 @@
 
     .divider {
       width: 48px; height: 2px;
-      background: var(--gold);
+      background: var(--brown2);
       margin-bottom: 36px;
     }
 
@@ -157,7 +157,7 @@
       background: var(--sand);
       border-radius: 16px;
       padding: 28px 24px;
-      border: 1px solid rgba(124,102,80,.1);
+      border: 1px solid rgba(184,59,114,.1);
     }
 
     .card-icon { font-size: 28px; margin-bottom: 14px; }
@@ -166,7 +166,7 @@
 
     /* ===== STRENGTH ===== */
     .strength-block {
-      background: linear-gradient(135deg, #2C2218, #3D2D1E);
+      background: linear-gradient(135deg, #F2BDD0, #FBDCE9);
       border-radius: 20px;
       padding: 48px 40px;
       color: #fff;
@@ -178,18 +178,18 @@
       position: absolute;
       top: -20px; left: 20px;
       font-size: 180px;
-      color: rgba(201,168,76,.08);
+      color: rgba(240,168,200,.1);
       font-family: Georgia, serif;
       line-height: 1;
     }
     .strength-block p {
-      color: rgba(255,255,255,.8);
+      color: #5C2D3E;
       font-size: 16px;
       line-height: 2;
       position: relative;
     }
     .strength-keyword {
-      color: var(--gold);
+      color: #B83B72;
       font-weight: 700;
     }
 
@@ -197,7 +197,7 @@
     .vision-list { list-style: none; }
     .vision-list li {
       padding: 18px 0;
-      border-bottom: 1px solid rgba(124,102,80,.12);
+      border-bottom: 1px solid rgba(184,59,114,.12);
       display: flex;
       gap: 16px;
       align-items: flex-start;
@@ -208,7 +208,7 @@
     .vision-num {
       font-family: 'Noto Serif JP', serif;
       font-size: 20px;
-      color: var(--gold);
+      color: var(--brown2);
       font-weight: 700;
       flex-shrink: 0;
       line-height: 1.5;
@@ -223,8 +223,8 @@
 
     /* ===== FOOTER ===== */
     footer {
-      background: var(--dark);
-      color: rgba(255,255,255,.4);
+      background: #F2BDD0;
+      color: rgba(92,45,62,.55);
       text-align: center;
       padding: 40px 24px;
       font-size: 13px;
@@ -242,7 +242,7 @@
 <!-- ===== HERO ===== -->
 <div class="hero">
   <div class="hero-inner">
-    <div class="avatar">🌿</div>
+    <div class="avatar">🩷</div>
     <p class="hero-en">Rie Shimizu</p>
     <h1>清水 里恵</h1>
     <div class="hero-tag">CEO &nbsp;/&nbsp; 資金管理会社　4年目</div>
@@ -314,7 +314,7 @@
       <div class="card-body">資金管理会社CEOとして4年。お金の流れを俯瞰して見られる経営者の視点を持つ。</div>
     </div>
     <div class="card">
-      <div class="card-icon">🌿</div>
+      <div class="card-icon">🌸</div>
       <div class="card-title">静かな環境・深い関係</div>
       <div class="card-body">大勢より1対1。喧騒より静けさ。フラットで対等な関係の中でこそ、力が発揮される。</div>
     </div>
