@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>清水里恵 — 自己紹介</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;500&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sand:   #F5F0E8;
+      --cream:  #FDFAF4;
+      --brown:  #7C6650;
+      --brown2: #A08060;
+      --dark:   #2C2218;
+      --gray:   #6B6058;
+      --green:  #5C7A5C;
+      --gold:   #C9A84C;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.8;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(160deg, #2C2218 0%, #4A3828 50%, #6B5040 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(201,168,76,.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(92,122,92,.10) 0%, transparent 50%);
+    }
+
+    .hero-inner { position: relative; z-index: 1; }
+
+    .avatar {
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--brown2));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 52px;
+      margin: 0 auto 32px;
+      box-shadow: 0 0 0 4px rgba(201,168,76,.3), 0 20px 60px rgba(0,0,0,.4);
+    }
+
+    .hero h1 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: .12em;
+      margin-bottom: 12px;
+    }
+
+    .hero-en {
+      font-size: 14px;
+      color: rgba(255,255,255,.5);
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      border: 1px solid rgba(201,168,76,.6);
+      color: var(--gold);
+      font-size: 13px;
+      padding: 6px 20px;
+      border-radius: 20px;
+      letter-spacing: .1em;
+      margin-bottom: 40px;
+    }
+
+    .hero-desc {
+      font-size: clamp(15px, 2vw, 18px);
+      color: rgba(255,255,255,.75);
+      max-width: 520px;
+      margin: 0 auto 48px;
+      font-weight: 300;
+    }
+
+    .scroll-hint {
+      font-size: 12px;
+      color: rgba(255,255,255,.35);
+      letter-spacing: .15em;
+    }
+    .scroll-hint::after {
+      content: '';
+      display: block;
+      width: 1px; height: 48px;
+      background: rgba(255,255,255,.2);
+      margin: 10px auto 0;
+    }
+
+    /* ===== SECTION ===== */
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 32px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 32px;
+      line-height: 1.4;
+    }
+
+    .divider {
+      width: 48px; height: 2px;
+      background: var(--gold);
+      margin-bottom: 36px;
+    }
+
+    p { color: var(--gray); font-size: 15px; margin-bottom: 16px; }
+
+    /* ===== CARDS ===== */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 8px;
+    }
+
+    .card {
+      background: var(--sand);
+      border-radius: 16px;
+      padding: 28px 24px;
+      border: 1px solid rgba(124,102,80,.1);
+    }
+
+    .card-icon { font-size: 28px; margin-bottom: 14px; }
+    .card-title { font-size: 14px; font-weight: 700; color: var(--brown); margin-bottom: 8px; letter-spacing: .05em; }
+    .card-body { font-size: 13px; color: var(--gray); line-height: 1.7; }
+
+    /* ===== STRENGTH ===== */
+    .strength-block {
+      background: linear-gradient(135deg, #2C2218, #3D2D1E);
+      border-radius: 20px;
+      padding: 48px 40px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .strength-block::before {
+      content: '"';
+      position: absolute;
+      top: -20px; left: 20px;
+      font-size: 180px;
+      color: rgba(201,168,76,.08);
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+    .strength-block p {
+      color: rgba(255,255,255,.8);
+      font-size: 16px;
+      line-height: 2;
+      position: relative;
+    }
+    .strength-keyword {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* ===== VISION ===== */
+    .vision-list { list-style: none; }
+    .vision-list li {
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(124,102,80,.12);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      font-size: 15px;
+      color: var(--gray);
+    }
+    .vision-list li:last-child { border-bottom: none; }
+    .vision-num {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 20px;
+      color: var(--gold);
+      font-weight: 700;
+      flex-shrink: 0;
+      line-height: 1.5;
+    }
+
+    /* ===== BAND ===== */
+    .band {
+      background: var(--sand);
+      padding: 80px 32px;
+    }
+    .band-inner { max-width: 800px; margin: 0 auto; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,.4);
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 13px;
+      letter-spacing: .08em;
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 60px 20px; }
+      .strength-block { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="avatar">🌿</div>
+    <p class="hero-en">Rie Shimizu</p>
+    <h1>清水 里恵</h1>
+    <div class="hero-tag">CEO &nbsp;/&nbsp; 資金管理会社　4年目</div>
+    <p class="hero-desc">
+      人の才能を見つけ、言葉にして届ける。<br>
+      AIで、その力を世界中に広げていく。
+    </p>
+    <p class="scroll-hint">scroll</p>
+  </div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section>
+  <p class="section-label">About</p>
+  <h2>わたしについて</h2>
+  <div class="divider"></div>
+  <p>
+    資金管理会社のCEOとして4年。数字を扱う仕事の傍ら、ずっと大切にしてきたのは「人」でした。
+  </p>
+  <p>
+    誰かと1対1で話すとき、その人がまだ気づいていない才能や強みが見えてくる。
+    それを言葉にして伝えると、相手の表情が変わる瞬間が好きです。
+  </p>
+  <p>
+    今は、その力をAIと掛け合わせることに夢中。
+    一人ひとりに寄り添うことと、自動化の仕組みを作ること——
+    その両方を追いかけています。
+  </p>
+</section>
+
+<!-- ===== STRENGTH ===== -->
+<div class="band">
+  <div class="band-inner">
+    <p class="section-label">Core Strength</p>
+    <h2>わたしの核となる強み</h2>
+    <div class="divider"></div>
+    <div class="strength-block">
+      <p>
+        人の中に眠る<span class="strength-keyword">才能・強み・可能性</span>を、
+        対話の中で見つけ出し、<br>
+        その人の心に届く<span class="strength-keyword">言葉</span>に変えて伝える力。
+        <br><br>
+        「観察力」「言語化力」「共感力」——<br>
+        この3つが重なるとき、相手は初めて<span class="strength-keyword">自分の輪郭</span>を知る。
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CARDS ===== -->
+<section>
+  <p class="section-label">Profile</p>
+  <h2>得意なこと・興味・大切にしていること</h2>
+  <div class="divider"></div>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-icon">🔍</div>
+      <div class="card-title">才能の発掘・言語化</div>
+      <div class="card-body">相手が気づいていない強みを見つけ、その人ならではの言葉で伝えること。1対1の深い関わりで最大発揮。</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🤖</div>
+      <div class="card-title">AI × 自動化</div>
+      <div class="card-body">AIを使って「自分が動かなくても収益が生まれる仕組み」を作ることに夢中。</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">💰</div>
+      <div class="card-title">資金・経営の視点</div>
+      <div class="card-body">資金管理会社CEOとして4年。お金の流れを俯瞰して見られる経営者の視点を持つ。</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🌿</div>
+      <div class="card-title">静かな環境・深い関係</div>
+      <div class="card-body">大勢より1対1。喧騒より静けさ。フラットで対等な関係の中でこそ、力が発揮される。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VISION ===== -->
+<div class="band">
+  <div class="band-inner">
+    <p class="section-label">Vision</p>
+    <h2>これからやりたいこと</h2>
+    <div class="divider"></div>
+    <ul class="vision-list">
+      <li>
+        <span class="vision-num">01</span>
+        <span>AIを使って、才能発掘・言語化のプロセスを自動化する。一人ひとりに寄り添うことを、スケールさせたい。</span>
+      </li>
+      <li>
+        <span class="vision-num">02</span>
+        <span>SNSコンテンツの自動生成・投稿システムを自分で作り、自分の発信を仕組み化する。</span>
+      </li>
+      <li>
+        <span class="vision-num">03</span>
+        <span>AIを活用した自動収益化の仕組みを構築し、「時間を売る」以外の収益を手に入れる。</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>清水 里恵　&nbsp;|&nbsp;　Rie Shimizu</p>
+  <p style="margin-top: 8px; font-size: 11px;">CEO / 資金管理会社</p>
+</footer>
+
+</body>
+</html>
